@@ -116,4 +116,4 @@ ENV HERMES_WEB_DIST=/opt/hermes/hermes_cli/web_dist
 ENV HERMES_HOME=/opt/data
 ENV PATH="/opt/data/.local/bin:${PATH}"
 # Run gateway by default (supports Telegram webhook mode)
-CMD [ "/usr/bin/tini", "-g", "--", "/opt/hermes/docker/entrypoint.sh", "gateway", "run" ]
+CMD [ "hermes", "gateway", "run" ]
