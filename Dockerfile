@@ -117,5 +117,7 @@ ENV HERMES_HOME=/opt/data
 ENV PATH="/opt/data/.local/bin:/opt/hermes/.venv/bin:${PATH}"
 # Allow root gateway for Railway deployment
 ENV HERMES_ALLOW_ROOT_GATEWAY=1
+# Railway sets PORT env var - use it for webhook server
+ENV PORT=${PORT:-8080}
 # Run hermes gateway directly
 CMD [ "hermes", "gateway", "run" ]
