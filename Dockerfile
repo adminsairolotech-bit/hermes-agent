@@ -115,5 +115,7 @@ RUN uv pip install --no-cache-dir --no-deps -e "."
 ENV HERMES_WEB_DIST=/opt/hermes/hermes_cli/web_dist
 ENV HERMES_HOME=/opt/data
 ENV PATH="/opt/data/.local/bin:/opt/hermes/.venv/bin:${PATH}"
+# Allow root gateway for Railway deployment
+ENV HERMES_ALLOW_ROOT_GATEWAY=1
 # Run hermes gateway directly
 CMD [ "hermes", "gateway", "run" ]
